@@ -1,0 +1,24 @@
+#l-main_content {
+    margin: 35px auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 960px;
+    padding: 0 6%;
+
+    @media #{$screen_sm} {
+        grid-template-columns: 3fr 211px;
+        grid-column-gap: 50px;
+        padding: 0 6%;
+    }
+}
+
+@media #{$screen_sm} {
+
+    .l-news {
+        grid-column: 1 / 2;
+    }
+
+    .l-sidebar {
+        grid-column: 2 / 3;
+    }
+}

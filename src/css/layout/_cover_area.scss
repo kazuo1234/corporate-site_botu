@@ -1,0 +1,50 @@
+@import "../foundation/variables";
+
+@mixin mixCoverArea($padding_top, $background, $background_2x ,$height) {
+    text-align: center;
+    padding: $padding_top 0;
+
+    // retina_bg
+    background-image: url($background);
+    background-size: cover;
+
+    @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+        background-image: url($background_2x);
+    }
+
+    @media #{$screen_sm} {
+        text-align: left;
+        height: $height;
+        padding: 0;
+
+        @content
+    }
+}
+
+#cover_area {
+    @include mixCoverArea(80px, "../images/top/cover.jpg", "../images/top/cover@2x.jpg", 420px) {
+        img {
+            margin-top: 180px;
+            margin-left: 70px;
+        }
+    }
+}
+
+#cover_area_sm {
+    @include mixCoverArea(40px, "../images/news/sub_cover", "../images/news/sub_cover@2x.jpg", 200px);
+
+    .cover_area__title {
+        color: #fff;
+        display: block;
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+
+        @media #{$screen_sm} {
+            font-size: 3.2rem;
+            margin-top: 80px
+        }
+    }
+}
+

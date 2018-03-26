@@ -1,0 +1,35 @@
+#service_area {
+    padding-top: 20px;
+
+    @media #{$screen_sm} {
+        padding-top: 30px;
+    }
+
+    .columns {
+        color: #626262;
+
+        .service_title {
+            @include fontsize(18);
+            font-weight: bold;
+            margin-top: 8px;
+        }
+    }
+
+    p {
+        @include fontsize(15);
+        margin-top: 10px;
+    }
+
+    @media #{$screen_sm} {
+
+        .service_title {
+            @include fontsize(16);
+        }
+
+        p {
+
+            @include fontsize(13);
+        }
+
+    }
+}

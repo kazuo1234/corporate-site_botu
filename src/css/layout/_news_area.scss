@@ -1,0 +1,52 @@
+#news_area {
+    background-color: $gray_blue;
+
+    @media #{$screen_sm} {
+        .container {
+            padding: 0px 10% 50px 10%;
+        }
+    }
+
+    .news_title {
+        text-align: center;
+        @include fontsize(26);
+        color: $blue1;
+        padding: 15px 0 10px 0;
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+    }
+}
+
+.news_lists {
+    li {
+        list-style: none;
+        @include fontsize(15);
+
+        span {
+            color: $blue1;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 3px;
+        }
+    }
+}
+
+@media #{$screen_sm} {
+    .news_title {
+        @include fontsize(22);
+        padding: 50px 0 41px 0;
+    }
+
+    .news_lists {
+        li {
+            @include fontsize(14);
+            margin-bottom: 20px;
+
+            span {
+                display: inline;
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,46 @@
+@import "../../foundation/variables";
+
+// サイドメニュー
+.p-sidebar__navigation {
+    display: none;
+}
+
+@media #{$screen_sm} {
+    .p-sidebar__navigation {
+
+        display: block;
+
+        h3 {
+            background-color: #f3f9fb;
+            color: #42b9d0;
+            font-size: 1.4rem;
+            font-weight: bold;
+            letter-spacing: 0.2rem;
+            padding: 15px;
+            margin-bottom: 0;
+        }
+
+        li {
+            background-image: url("../images/news/side_arrow.png");
+
+            @media screen and (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 2dppx) {
+                background-image: url("../images/news/side_arrow@2x.png");
+            }
+
+            background-position: 8px center;
+            background-size: 4px 8px;
+            background-repeat: no-repeat;
+            border-bottom: 1px solid #e5e5e5;
+            display: block;
+            padding: 10px 10px 10px 20px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+// facebook
+.p-sidebar__facebook {
+    display: block;
+    margin-bottom: 20px;
+}

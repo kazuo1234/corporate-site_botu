@@ -1,0 +1,80 @@
+@import "../../foundation/variables";
+
+@mixin articleTitle {
+    @include fontsize(15);
+    padding-bottom: 15px;
+    border-bottom: 3px solid $blue1;
+    color: $blue1;
+
+    @media #{$screen_sm} {
+        @include fontsize(22);
+        padding: 0 0 20px 0;
+    }
+}
+
+// news記事
+.l-news {
+    .news__title {
+        @include articleTitle;
+    }
+
+    .news__lists {
+        list-style: none;
+        @include fontsize(15);
+
+        span {
+            color: $blue1;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 3px;
+
+        }
+    }
+}
+
+@media #{$screen_sm} {
+    .l-news {
+        .news__lists {
+            @include fontsize(14);
+            margin-bottom: 20px;
+
+            span {
+                display: inline;
+                margin-bottom: 0px;
+            }
+
+        }
+    }
+}
+
+// 会社概要
+.l-corportion {
+    .corporation__title {
+        @include articleTitle;
+    }
+
+    .corporation__table {
+        border-collapse: collapse;
+        color: #626262;
+        width: 100%;
+        @include fontsize(14);
+
+        th {
+            padding-right: 20px;
+        }
+
+        td {
+            padding-left: 0;
+        }
+
+    }
+}
+
+p-sidebar__facebook {
+
+    padding-left: auto;
+
+    @media #{$screen_sm} {
+        width: 211px;
+    }
+}

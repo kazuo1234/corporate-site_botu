@@ -1,14 +1,14 @@
 @import "../foundation/variables";
 
 @mixin navMenu($img, $imgRetina) {
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     display: inline-block;
     line-height: 40px;
     padding-left: 50px;
     background-image: url($img);
     background-size: 40px 40px;
 
-    @media screen and (-webkit-min-device-pixel-ratio:2), (min-resolution: 2dppx) {
+    @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
         background-image: url($imgRetina);
     }
 }
@@ -42,6 +42,7 @@ header {
         margin: 0;
         padding: 0;
         display: none;
+        z-index: 100;
 
         li {
             list-style: none;
@@ -62,15 +63,15 @@ header {
             display: none;
         }
         #header_in {
-          padding: 15px 0 10px 0;
+            padding: 15px 0 10px 0;
         }
 
         .pc_navi_li {
-            margin:0;
-            padding:0;
+            margin: 0;
+            padding: 0;
 
             li {
-                list-style:none;
+                list-style: none;
                 margin: 5px 0 0 0;
                 padding: 0;
 
@@ -87,24 +88,18 @@ header {
                     color: $blue1;
                 }
             }
-            // li
             li.navi_toppage a {
-                //retina_bg
                 @include navMenu("../images/top/navi_top.png", "../images/top/navi_top@2x.png");
             }
 
-            // .li.navi_toppage a
             li.navi_news a {
-                //retina_bg
                 @include navMenu("../images/top/navi_news.png", "../images/top/navi_news@2x.png");
             }
 
-            // .li.navi_news a
             li.navi_company a {
-                //retina_bg
                 @include navMenu("../images/top/navi_company.png", "../images/top/navi_company@2x.png");
-            }  // .li.navi_company a
-        }  // .pc_navi_li
+            }
+        }
     }
     @media #{$screen_xs} {
         .pc_navi {
