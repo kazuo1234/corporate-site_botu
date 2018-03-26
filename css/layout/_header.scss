@@ -1,0 +1,114 @@
+@import "../foundation/variables";
+
+@mixin navMenu($img, $imgRetina) {
+    background-repeat:no-repeat;
+    display: inline-block;
+    line-height: 40px;
+    padding-left: 50px;
+    background-image: url($img);
+    background-size: 40px 40px;
+
+    @media screen and (-webkit-min-device-pixel-ratio:2), (min-resolution: 2dppx) {
+        background-image: url($imgRetina);
+    }
+}
+
+header {
+    background: $gray_blue;
+
+    #header_in {
+        padding-top: 10px;
+        padding-bottom: 4px;
+    }
+
+    @media #{$screen_xs} {
+        .logo {
+            width: 190px;
+        }
+
+        .navi {
+            width: 40px;
+            float: right;
+        }
+    }
+
+    .sp_navi_li {
+        width: 180px;
+        position: absolute;
+        top: 50px;
+        right: 2%;
+        border: 1px solid #eee;
+        background: white;
+        margin: 0;
+        padding: 0;
+        display: none;
+
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            a {
+                display: block;
+                padding: 10px 8px;
+                border-bottom: 1px solid #eee;
+                font-size: 14px;
+                text-decoration: none;
+            }
+        }
+    }
+    @media #{$screen_sm} {
+        .sp_navi {
+            display: none;
+        }
+        #header_in {
+          padding: 15px 0 10px 0;
+        }
+
+        .pc_navi_li {
+            margin:0;
+            padding:0;
+
+            li {
+                list-style:none;
+                margin: 5px 0 0 0;
+                padding: 0;
+
+                a {
+                    color: #626262;
+                    text-decoration: none;
+                    font-weight: bold;
+                    @include fontsize(14);
+                    float: left;
+                    padding-right: 10px;
+                }
+
+                a:hover {
+                    color: $blue1;
+                }
+            }
+            // li
+            li.navi_toppage a {
+                //retina_bg
+                @include navMenu("../images/top/navi_top.png", "../images/top/navi_top@2x.png");
+            }
+
+            // .li.navi_toppage a
+            li.navi_news a {
+                //retina_bg
+                @include navMenu("../images/top/navi_news.png", "../images/top/navi_news@2x.png");
+            }
+
+            // .li.navi_news a
+            li.navi_company a {
+                //retina_bg
+                @include navMenu("../images/top/navi_company.png", "../images/top/navi_company@2x.png");
+            }  // .li.navi_company a
+        }  // .pc_navi_li
+    }
+    @media #{$screen_xs} {
+        .pc_navi {
+            display: none;
+        }
+    }
+}

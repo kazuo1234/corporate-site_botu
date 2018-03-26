@@ -1,0 +1,15 @@
+@import "../foundation/variables";
+
+#cover_area {
+
+    text-align: center;
+    padding: 80px 0;
+
+    // retina_bg
+    background-image: url("../images/top/cover.jpg");
+    background-size: cover;
+
+    @media screen and (-webkit-min-device-pixel-ratio:2), (min-resolution: 2dppx) {
+        background-image: url("../images/top/cover@2x.jpg");
+    }
+}

@@ -1,0 +1,13 @@
+// 画面サイズ
+$screen_xs: "(max-width:550px)";    // スマホ以下
+$screen_sm: "(min-width:551px)";    // タブレット以上
+$screen_md: "(min-width:1025px)";   // PC以上
+$screen_lg: "(min-width:1200px)";   // PC（大画面）以上
+
+// フォント
+$ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+
+// 色
+$blue1 : #42b9d0;
+$blue2 : #339fd1;
+$gray_blue : #eaf2f4;
